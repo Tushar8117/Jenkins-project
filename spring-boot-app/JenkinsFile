@@ -5,6 +5,8 @@ pipeline {
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket to access the host's Docker daemon
     }
   }
+
+  stages { // Add stages block
     stage('Checkout') {
       steps {
         sh 'echo "Checking out source code..."'
